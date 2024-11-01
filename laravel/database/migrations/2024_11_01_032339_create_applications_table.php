@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
+            $table->text('name_user');
+            $table->text('title');
+            $table->text('description');
+            $table->date('days');
+            $table->enum('status', ['Новая', 'Принята','Отклонена']);
             $table->timestamps();
         });
     }

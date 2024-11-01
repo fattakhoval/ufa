@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Holiday extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+
+    protected $fillable = ['title', 'description', 'city'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

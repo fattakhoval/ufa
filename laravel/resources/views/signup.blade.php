@@ -11,7 +11,13 @@
     <input name="email" type="email" placeholder="Почта">
     <input name="password" type="password" placeholder="Пароль">
 
-    <input type="submit" value="Войти">
+    <input type="submit" value="Зарегистрироваться">
 </form>
+
+
+<div class="auth-line">
+    <p>Уже есть аккаунт?</p>
+    <a href="">Войти</a>
+</div>
 
 @endsection

@@ -25,9 +25,16 @@
     <a href="">Главная</a>
     <a href="">Заявки</a>
 </nav>
+
+<main>
+    <section>
+        @yield('content')
+    </section>
+
+</main>
     
 <footer>
-    
+
 </footer>
 
 </body>

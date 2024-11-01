@@ -78,6 +78,10 @@ class UserController extends Controller
         ]);
 
         // Auth::login($user);
-        return redirect()->route('account');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('ourAs');
     }
 }

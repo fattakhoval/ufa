@@ -17,9 +17,13 @@ class ApplicationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email',
-            'proposal' => 'required|string',
+            'name_user' => 'required|string|max:255',
+            'title' => 'required|email',
+            'description' => 'required|string',
+            'days' => 'required|string',
+            'status' => 'required|string',
+
+
         ]);
 
         Application::create($request->all()); // Создаем новую заявку

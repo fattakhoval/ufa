@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.sofia {
+  font-family: "Sofia Sans Semi Condensed", serif;
+  font-weight: 400;
+}
+
+
+/* LAYOUTS  */
+
+.gaps-between {
+    gap: 2em;
+}
+
+.bg-small {
+    background-image: url(images/bg/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    padding: 0 0.5em;
+    margin: 0 0 2em 0;
+
+}
+
+
+/* SIGN UP  */
+
+.form-up {
+    width: 50vw;
+    gap: 1em;
+    border: 3px black solid;
+    padding: 3em;
+}
+
+.form-up * {
+    width: 40vw;
+    height: 4vh;
+}
+
+.form-up input {
+    padding: 0 1em;
+    border: 2px solid black;
+}
+
+.form-up input[type=submit] {
+    background-color: #393939;
+    border: none;
+    color: white;
+}
+
+footer {
+    min-height: 2em;
+    width: 100vw;
+    background-image: url(images/bg/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

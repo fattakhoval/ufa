@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [UserController::class, 'show_signup'])->name('index');
 Route::get('/signup', [UserController::class, 'show_signup'])->name('show_signup');
 Route::post('/signup', [UserController::class, 'signup'])->name('signup');
+
+Route::get('/signin', [UserController::class, 'show_signin'])->name('show_signin');
+
 
 Route::get('/signup', [UserController::class, 'show_signup'])->name('show_signup');
 Route::post('/signup', [UserController::class, 'signup'])->name('signup');

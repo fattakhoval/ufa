@@ -24,6 +24,9 @@ Route::post('/signup', [UserController::class, 'signup'])->name('signup');
 
 Route::get('/signin', [UserController::class, 'show_signin'])->name('show_signin');
 
+Route::get('/admin', [UserController::class, 'show_admin'])->name('show_admin');
+Route::get('/news', [UserController::class, 'show_news'])->name('show_news');
+
 
 Route::get('/signup', [UserController::class, 'show_signup'])->name('show_signup');
 Route::post('/signup', [UserController::class, 'signup'])->name('signup');

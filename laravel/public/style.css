@@ -51,6 +51,14 @@
     color: white;
 }
 
+/* ADMIN  */
+
+.application {
+    width: 50vw;
+    border: 3px black solid;
+    padding: 1em;
+}
+
 footer {
     min-height: 2em;
     width: 100vw;

@@ -41,6 +41,12 @@ class UserController extends Controller
     public function show_signin(){
         return view('signin');
     }
+    public function show_admin(){
+        return view('admin');
+    }
+    public function show_news(){
+        return view('news');
+    }
 
     public function signin(Request $request){
         $request->validate([

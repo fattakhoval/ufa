@@ -22,7 +22,7 @@ class ApplicationController extends Controller
     {
         $request->validate([
             'name_user' => 'required|string|max:255',
-            'title' => 'required|email',
+            'title' => 'required',
             'description' => 'required|string',
             'days' => 'required|string',
             'status' => 'required|string',

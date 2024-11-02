@@ -18,21 +18,21 @@
     <title> РБ | @yield('pagename')</title>
 </head>
 
-<body class="sofia" style="min-height: 100vh">
+<body class="sofia d-flex flex-column align-items-center" style="min-height: 100vh; max-width: 100vw;">
 
-    <header class="d-flex flex-column align-items-center">
-        <nav>
-            <a href=""><img src="images/icons/profile.png" alt=""></a>
+    <header class="d-flex flex-column align-items-end bg-big">
+        <nav class="d-flex">
+            <a href="" class="d-flex"><img src="images/icons/profile.png" alt=""></a>
         </nav>
 
-        <div class="banner-text d-flex flex-column align-items-center">
+        <div class="banner-text d-flex flex-column align-items-center align-self-center">
             <h1>Все о главном</h1>
             <p>могло бы быть, но мы поговорим о РБ</p>
         </div>
 
     </header>
 
-    <nav class="d-flex justify-content-evenly">
+    <nav class="d-flex justify-content-evenly nav-second">
         <a href="">Мероприятия</a>
         <a href="">Главная</a>
         <a href="">Заявки</a>
@@ -40,7 +40,7 @@
     </nav>
 
     <main style="flex: 1">
-        <section>
+        <section class="d-flex flex-column align-items-center gaps-between">
             @yield('content')
         </section>
 

@@ -36,6 +36,7 @@
         <a href="">Мероприятия</a>
         <a href="">Главная</a>
         <a href="">Заявки</a>
+        <a href="{{route('show_signin')}}">Вход</a>
     </nav>
 
     <main style="flex: 1">

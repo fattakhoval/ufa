@@ -8,19 +8,19 @@
 <h2>ДОБРО ПОЖАЛОВАТЬ НА НАШ САЙТ</h2>
         <h3>РЕГИСТРАЦИЯ</h3>
 
-<form action="" method="post" class="d-flex flex-column align-items-center form-up">
+<form action="{{route('signup')}}" method="post" class="d-flex flex-column align-items-center form-up">
     @csrf
-    <input name="fio" type="text" placeholder="ФИО">
-    <input name="email" type="email" placeholder="Почта">
-    <input name="password" type="password" placeholder="Пароль">
+    <input name="fio" type="text" placeholder="ФИО" required>
+    <input name="email" type="email" placeholder="Почта" required>
+    <input name="password" type="password" placeholder="Пароль" required>
 
-    <input type="submit" value="Зарегистрироваться">
+    <button type="submit">Регистрация</button>
 </form>
 
 
 <div class="auth-line d-flex">
     <p>Уже есть аккаунт?</p>
-    <a href="">Войти</a>
+    <a href="{{route('show_signin')}}">Войти</a>
 </div>
 
 @endsection

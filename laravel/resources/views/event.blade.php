@@ -4,14 +4,16 @@
 
 <h2>Предложите мероприятие</h2>
 
-<form action="" method="post" class="d-flex flex-column align-items-center">
-    <input type="hidden" name="id">
-    <input name="fio" type="text" placeholder="ФИО">
-    <input name="name" type="text" placeholder="Название">
-    <input name="descr" type="text" placeholder="Описание">
-    <input name="date" type="text" placeholder="Дата проведения">
+<form action="{{route('applications.store')}}" method="post" class="d-flex flex-column align-items-center">
+   @csrf
 
-    <input type="submit" value="Подать заявку">
+    <input type="hidden" name="id" value="1">
+    <input name="name_user" type="text" placeholder="ФИО" required>
+    <input name="title" type="text" placeholder="Название" required>
+    <input name="description" type="text" placeholder="Описание" required>
+    <input name="days" type="text" placeholder="Дата проведения" required>
+    <input type="hidden" name="status" value="Новая">
+    <button type="submit">Подать заявку</button>
 </form>
 
 @endsection

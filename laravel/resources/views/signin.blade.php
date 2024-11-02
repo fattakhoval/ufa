@@ -16,5 +16,7 @@
     <input type="submit" value="Войти">
 </form>
 
+<a href="{{route('show_signup')}}">зарегистрироваться</a>
+
 
 @endsection

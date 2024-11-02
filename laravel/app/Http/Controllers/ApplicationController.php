@@ -10,8 +10,12 @@ class ApplicationController extends Controller
     public function index()
     {
         $applications = Application::all(); // Получаем все заявки
-        return view('admin.allProducts', ['prods' => $applications]);
+        return view('event', ['prods' => $applications]);
 
+    }
+
+    public function show_event(){
+        return view('event');
     }
 
     public function store(Request $request)
@@ -28,7 +32,7 @@ class ApplicationController extends Controller
 
         Application::create($request->all()); // Создаем новую заявку
         // return response()->json(['success' => 'Заявка успешно отправлена!']); // Возвращаем успешный ответ
-        return redirect()->route('/');
+        return redirect()->route('event');
 
 
     }
@@ -42,7 +46,7 @@ class ApplicationController extends Controller
     public function accept($id)
     {
         $application = Application::findOrFail($id); // Находим заявку по ID
-        $application->status = 'accepted'; // Устанавливаем статус как "принята"
+        $application->status = 'Принята'; // Устанавливаем статус как "принята"
         $application->save(); // Сохраняем изменения
 
         return redirect()->route('applications.index')->with('success', 'Заявка принята!'); // Перенаправляем с сообщением об успехе
@@ -51,7 +55,7 @@ class ApplicationController extends Controller
     public function reject($id)
     {
         $application = Application::findOrFail($id); // Находим заявку по ID
-        $application->status = 'rejected'; // Устанавливаем статус как "отклонена"
+        $application->status = 'Отклонена'; // Устанавливаем статус как "отклонена"
         $application->save(); // Сохраняем изменения
 
         return redirect()->route('applications.index')->with('success', 'Заявка отклонена!'); // Перенаправляем с сообщением об успехе

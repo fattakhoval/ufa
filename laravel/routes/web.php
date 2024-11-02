@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UserController::class, 'show_signup'])->name('index');
+Route::get('/', [HolidayController::class, 'index'])->name('index');
 Route::get('/signup', [UserController::class, 'show_signup'])->name('show_signup');
 Route::post('/signup', [UserController::class, 'signup'])->name('signup');
 
@@ -30,7 +30,7 @@ Route::post('/signup', [UserController::class, 'signup'])->name('signup');
 
 Route::get('/logout', [UserController::class,'logout'])->name('logout');
 
-
+Route::get('/show_event', [ApplicationController::class, 'show_event'])->name('show_event');
 Route::prefix('applications')->group(function () {
     Route::get('/', [ApplicationController::class, 'index'])->name('applications.index'); // Вывод всех заявок
     Route::post('/', [ApplicationController::class, 'store'])->name('applications.store'); // Создание заявки

@@ -77,6 +77,9 @@ class UserController extends Controller
             'password'=>Hash::make($request->password)
         ]);
 
+        return redirect()->route('account');
+
+
         // Auth::login($user);
     }
 

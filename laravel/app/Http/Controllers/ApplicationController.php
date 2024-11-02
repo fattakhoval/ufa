@@ -21,18 +21,18 @@ class ApplicationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'user_id' => 'required',
             'name_user' => 'required|string|max:255',
             'title' => 'required',
             'description' => 'required|string',
             'days' => 'required|string',
             'status' => 'required|string',
 
-
         ]);
 
         Application::create($request->all()); // Создаем новую заявку
         // return response()->json(['success' => 'Заявка успешно отправлена!']); // Возвращаем успешный ответ
-        return redirect()->route('event');
+        return redirect()->route('show_event');
 
 
     }

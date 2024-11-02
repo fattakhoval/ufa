@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('title');
             $table->text('description');
             $table->date('days');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->enum('status', ['Новая', 'Принята','Отклонена']);
             $table->timestamps();
         });

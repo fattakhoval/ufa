@@ -12,7 +12,7 @@
 /* LAYOUTS  */
 
 .gaps-between {
-    gap: 2em;
+    gap: 2.5em;
 }
 
 .bg-small {
@@ -23,6 +23,10 @@
     padding: 0 0.5em;
     margin: 0 0 2em 0;
 
+}
+
+.banner-text {
+    color: white;
 }
 
 
@@ -65,4 +69,47 @@ footer {
     background-image: url(images/bg/bg1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100vw;
+
 }
+
+/* news  */
+
+.news {
+    margin: 0 0 3em 0;
+}
+
+.bg-big {
+    background-image: url(images/bg/bg1.png);
+    height: 50vh;
+    background-image: url(images/bg/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    gap: 5em;
+}
+
+.nav-second {
+    border: 3px black solid;
+    width: 30vw;
+    font-size: 1.75em;
+    margin: 2em 0;
+
+}
+
+.nav-second a {
+    text-decoration: none;
+    color: black;
+}
+
+.news-header {
+    background-color: #393939;
+    padding: 1em 1.5em;
+    color: white;
+}
+
+.block-new {
+    padding: 2em 3em;
+    border: 3px black solid;
+}
+

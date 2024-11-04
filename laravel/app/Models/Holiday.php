@@ -9,7 +9,7 @@ class Holiday extends Model
 {
     // use HasFactory;
 
-    protected $fillable = ['title', 'description', 'city', 'id_user'];
+    protected $fillable = ['title', 'description', 'city', 'user_id'];
 
     public function user(){
         return $this->belongsTo(User::class);

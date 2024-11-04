@@ -10,7 +10,7 @@ class ApplicationController extends Controller
     public function index()
     {
         $applications = Application::all(); // Получаем все заявки
-        return view('event', ['prods' => $applications]);
+        return view('admin', ['applications' => $applications]);
 
     }
 
@@ -49,7 +49,7 @@ class ApplicationController extends Controller
         $application->status = 'Принята'; // Устанавливаем статус как "принята"
         $application->save(); // Сохраняем изменения
 
-        return redirect()->route('applications.index')->with('success', 'Заявка принята!'); // Перенаправляем с сообщением об успехе
+        return redirect()->route('index')->with('success', 'Заявка принята!'); // Перенаправляем с сообщением об успехе
     }
 
     public function reject($id)
@@ -58,6 +58,6 @@ class ApplicationController extends Controller
         $application->status = 'Отклонена'; // Устанавливаем статус как "отклонена"
         $application->save(); // Сохраняем изменения
 
-        return redirect()->route('applications.index')->with('success', 'Заявка отклонена!'); // Перенаправляем с сообщением об успехе
+        return redirect()->route('index')->with('success', 'Заявка отклонена!'); // Перенаправляем с сообщением об успехе
     }
 }

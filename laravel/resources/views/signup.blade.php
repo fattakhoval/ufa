@@ -10,7 +10,7 @@
 
 <form action="{{route('signup')}}" method="post" class="d-flex flex-column align-items-center form-up">
     @csrf
-    <input name="fio" type="text" placeholder="ФИО" required>
+    <input name="name" type="text" placeholder="ФИО" required>
     <input name="email" type="email" placeholder="Почта" required>
     <input name="password" type="password" placeholder="Пароль" required>
 

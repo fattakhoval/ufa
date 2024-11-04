@@ -22,7 +22,7 @@
 
     <header>
         <nav class="d-flex justify-content-between bg-small">
-            <a href=""><img src="images/icons/arrow.png" alt=""></a>
+            <a href="{{route('logout')}}"><img src="images/icons/arrow.png" alt=""></a>
             <a href=""><img src="images/icons/profile.png" alt=""></a>
         </nav>
     </header>

@@ -48,21 +48,56 @@ class UserController extends Controller
         return view('news');
     }
 
-    public function signin(Request $request){
-        $request->validate([
-            'email'=>'required|email|string',
-            'password'=>'required|string'
-        ]);
+//     public function signin(Request $request){
+//         $request->validate([
+//             'email'=>'required|email|string',
+//             'password'=>'required|string',
+//             'role'=>'string'
+//         ]);
 
-        if(Auth::attempt([
-            'email'=>$request->email,
-            'password'=>$request->password
-        ])){
-            return redirect()->route('account');
-        }else{
-            return response('НЕ верные данные');
+//         if(Auth::attempt([
+//             'email'=>$request->email,
+//             'password'=>$request->password,
+//             'role'=>$request->role,
+//         ])){
+//             $user = Auth::user(); // Получаем текущего аутентифицированного пользователя
+
+// if ($user->role == 'Админ') {
+//     return redirect()->route('show_admin');
+// } else {
+//     return redirect()->route('holidays.index');
+// }
+//         }else{
+//             return response('НЕ верные данные');
+//         }
+//     }
+
+public function signin(Request $request) {
+    // Валидация входящих данных
+    $request->validate([
+        'email' => 'required|email|string',
+        'password' => 'required|string',
+        'role' => 'string' // Роль не обязательна для аутентификации
+    ]);
+
+    // Попытка аутентификации пользователя
+    if (Auth::attempt([
+        'email' => $request->email,
+        'password' => $request->password,
+    ])) {
+        $user = Auth::user(); // Получаем текущего аутентифицированного пользователя
+
+        // Проверка роли пользователя
+        if ($user->role == 'Админ') {
+            return redirect()->route('show_admin');
+        } else {
+            return redirect()->route('holidays.index');
         }
+    } else {
+        // Возвращаем сообщение об ошибке
+        return response()->json(['error' => 'Неверные данные'], 401);
     }
+}
 
 
     public function show_signup(){
@@ -73,17 +108,19 @@ class UserController extends Controller
         $request->validate([
             'name'=>'required|string|max:255',
             'email'=>'required|email|unique:users',
-            'password'=>'required|string|min:6'
+            'password'=>'required|string|min:6',
+            'role'=>'in:Пользователь'
 
         ]);
 
         $user = User::create([
             'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>Hash::make($request->password)
+            'password'=>Hash::make($request->password),
+            'role'=> 'Пользователь'
         ]);
 
-        return redirect()->route('account');
+        return redirect()->route('show_signin');
 
 
         // Auth::login($user);
@@ -91,6 +128,6 @@ class UserController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('ourAs');
+        return redirect()->route('holidays.index');
     }
 }

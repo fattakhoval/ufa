@@ -35,8 +35,15 @@
     <nav class="d-flex justify-content-evenly nav-second">
         <a href="">Мероприятия</a>
         <a href="">Главная</a>
-        <a href="">Заявки</a>
+        @guest
         <a href="{{route('show_signin')}}">Вход</a>
+        @endguest
+
+        @auth
+        <a href="{{route('logout')}}">Выход</a>
+        <a href="{{route()}}">Заявки</a>
+
+        @endauth
     </nav>
 
     <main style="flex: 1">

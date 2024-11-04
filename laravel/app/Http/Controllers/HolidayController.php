@@ -10,7 +10,7 @@ class HolidayController extends Controller
     public function index()
     {
         $holidays = Holiday::all(); // Получаем все посты
-        return view('index', compact('holidays')); // Возвращаем представление с постами
+        return view('news', compact('holidays')); // Возвращаем представление с постами
     }
 
     public function create()

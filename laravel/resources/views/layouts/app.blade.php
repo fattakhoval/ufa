@@ -34,14 +34,14 @@
 
     <nav class="d-flex justify-content-evenly nav-second">
         <a href="">Мероприятия</a>
-        <a href="">Главная</a>
+        <a href="{{route('index')}}">Главная</a>
         @guest
         <a href="{{route('show_signin')}}">Вход</a>
         @endguest
 
         @auth
         <a href="{{route('logout')}}">Выход</a>
-        <a href="{{route()}}">Заявки</a>
+        <a href="{{route('show_admin')}}">Заявки</a>
 
         @endauth
     </nav>

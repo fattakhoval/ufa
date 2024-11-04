@@ -47,6 +47,9 @@ class UserController extends Controller
     public function show_news(){
         return view('news');
     }
+    public function createnews(){
+        return view('createnews');
+    }
 
 //     public function signin(Request $request){
 //         $request->validate([

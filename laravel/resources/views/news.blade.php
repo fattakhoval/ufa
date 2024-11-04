@@ -6,23 +6,15 @@
 
 <div class="news d-flex flex-column align-items-center gaps-between">
 
-<div class="block-new d-flex flex-column align-items-center">
-    <h2 class="news-header">Название новости</h2>
-    <p>бла бла бла бла бла бла бла бла бла бла бла блаб бла <br>
-    бла бла бла бла бла бла бла бла ббла бла бла бла бла </p>
-</div>
+@foreach ($holidays as $holiday)
 
 <div class="block-new d-flex flex-column align-items-center">
-    <h2 class="news-header">Название новости</h2>
-    <p>бла бла бла бла бла бла бла бла бла бла бла блаб бла <br>
-    бла бла бла бла бла бла бла бла ббла бла бла бла бла </p>
+    <h2 class="news-header">{{$holiday->title}}</h2>
+    <p>{{$holiday->description}}</p>
 </div>
 
-<div class="block-new d-flex flex-column align-items-center">
-    <h2 class="news-header">Название новости</h2>
-    <p>бла бла бла бла бла бла бла бла бла бла бла блаб бла <br>
-    бла бла бла бла бла бла бла бла ббла бла бла бла бла </p>
-</div>
+@endforeach
+
 
 </div>
 

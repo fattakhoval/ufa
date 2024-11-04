@@ -18,9 +18,6 @@
         <p>{{ $app->description }}</p>
         <p>{{ $app->days }}</p>
         <p>{{ $app->name_user }}</p>
-        
-
-
     </div>
 
     @if($app->status == 'Новая')

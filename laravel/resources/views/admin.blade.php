@@ -1,5 +1,4 @@
 @extends ('layouts.second')
-
 @section('content')
 
 <h2>АДМИН</h2>

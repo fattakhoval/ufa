@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HolidayController::class, 'index'])->name('index');
+Route::get('/', [HolidayController::class, 'index'])->name('indexx');
 Route::get('/signup', [UserController::class, 'show_signup'])->name('show_signup');
 Route::post('/signup', [UserController::class, 'signup'])->name('signup');
 

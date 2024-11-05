@@ -33,15 +33,16 @@
     </header>
 
     <nav class="d-flex justify-content-evenly nav-second">
-        <a href="">Мероприятия</a>
-        <a href="{{route('index')}}">Главная</a>
+        
+        <a href="{{route('indexx')}}">Главная</a>
         @guest
         <a href="{{route('show_signin')}}">Вход</a>
         @endguest
 
         @auth
         <a href="{{route('logout')}}">Выход</a>
-        <a href="{{route('show_admin')}}">Заявки</a>
+        <a href="{{route('show_event')}}">Подать заявку</a>
+        <!-- <a href="{{route('holidays.create')}}">Создать пост</a> -->
 
         @endauth
     </nav>

@@ -80,7 +80,7 @@ public function signin(Request $request) {
     $request->validate([
         'email' => 'required|email|string',
         'password' => 'required|string',
-        'role' => 'string' // Роль не обязательна для аутентификации
+        // 'role' => 'string' // Роль не обязательна для аутентификации
     ]);
 
     // Попытка аутентификации пользователя
@@ -89,10 +89,11 @@ public function signin(Request $request) {
         'password' => $request->password,
     ])) {
         $user = Auth::user(); // Получаем текущего аутентифицированного пользователя
-
+        // var_dump($user);
         // Проверка роли пользователя
-        if ($user->role == 'Админ') {
-            return redirect()->route('show_admin');
+        if ($user->role == "Админ") {
+            var_dump($user->role);
+            return redirect()->route('index');
         } else {
             return redirect()->route('holidays.index');
         }

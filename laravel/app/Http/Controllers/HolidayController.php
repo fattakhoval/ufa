@@ -15,7 +15,7 @@ class HolidayController extends Controller
 
     public function create()
     {
-        return view('holidays.create'); // Возвращаем представление с формой создания поста
+        return view('createnews'); // Возвращаем представление с формой создания поста
     }
 
     public function store(Request $request)

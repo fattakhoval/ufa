@@ -24,6 +24,13 @@
         <nav class="d-flex justify-content-between bg-small">
             <a href="{{route('logout')}}"><img src="images/icons/arrow.png" alt=""></a>
             <a href=""><img src="images/icons/profile.png" alt=""></a>
+            @auth
+
+        <a href="{{route('index')}}">Заявки</a>
+        <a href="{{route('holidays.create')}}">Создать пост</a>
+        
+
+        @endauth
         </nav>
     </header>
 

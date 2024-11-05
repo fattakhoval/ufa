@@ -9,7 +9,7 @@
     <input type="hidden" name="user_id" value="1">
     <input name="title" type="text" placeholder="Название" required>
     <input name="description" type="text" placeholder="Описание" required>
-    <input name="city" type="text" placeholder="Описание" required>
+    <input name="city" type="text" placeholder="Город" required>
     <input type="submit" value="Создать новость">
 </form>
 

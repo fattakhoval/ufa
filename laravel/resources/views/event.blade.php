@@ -11,7 +11,7 @@
     <input name="name_user" type="text" placeholder="ФИО" required>
     <input name="title" type="text" placeholder="Название" required>
     <input name="description" type="text" placeholder="Описание" required>
-    <input name="days" type="text" placeholder="Дата проведения" required>
+    <input name="days" type="date" placeholder="Дата проведения" required>
     <input type="hidden" name="status" value="Новая">
     <input type="submit" value="Подать заявку">
 </form>

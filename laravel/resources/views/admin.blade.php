@@ -1,6 +1,22 @@
 @extends ('layouts.second')
 @section('content')
 
+@section('admin')
+
+<nav class="d-flex justify-content-evenly nav-second">
+
+@auth
+
+<a href="{{route('index')}}">Заявки</a>
+<a href="{{route('createnews')}}">Создать пост</a>
+
+
+@endauth
+
+
+</nav>
+@endsection
+
 <h2>АДМИН</h2>
 
 

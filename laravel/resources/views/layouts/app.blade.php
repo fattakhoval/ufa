@@ -22,7 +22,7 @@
 
     <header class="d-flex flex-column align-items-end bg-big">
         <nav class="d-flex">
-            <a href="" class="d-flex"><img src="images/icons/profile.png" alt=""></a>
+            <a href="{{route('index')}}" class="d-flex"><img src="images/icons/profile.png" alt=""></a>
         </nav>
 
         <div class="banner-text d-flex flex-column align-items-center align-self-center">

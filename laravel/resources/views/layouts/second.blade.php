@@ -27,7 +27,7 @@
             @auth
 
         <a href="{{route('index')}}">Заявки</a>
-        <a href="{{route('holidays.create')}}">Создать пост</a>
+        <a href="{{route('createnews')}}">Создать пост</a>
         
 
         @endauth

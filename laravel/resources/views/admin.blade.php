@@ -1,5 +1,6 @@
 @extends ('layouts.second')
 @section('content')
+@section('pagename', 'Админ')
 
 @section('admin')
 
